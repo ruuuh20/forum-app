@@ -1,5 +1,5 @@
 <% @posts.each do |post| %>
-<%= post.title %><br>
+<%= link_to post.title, post %><br>
 Published at: <br>
 <%=  time_ago_in_words(post.created_at) %>
 <% end %>
