@@ -12,11 +12,19 @@
   <body>
     <header class="clearfix">
         <div class="container">
-      <div class="logo" id="logo">
-        <p>Lead Korea </p>
-      </div>
+          <div class="logo" id="logo">
+            <%= link_to "Learn Korean, Lead New Millenium", root_path %>
+          </div>
 
-          <button type="button" id="buttons" name="button"><%= link_to "New Post", new_post_path %></button>
+          <div id="buttons">
+              <% if user_signed_in? %>
+                <%= link_to "New Post", new_post_path %>
+              <% else %>
+                <%= link_to "Sign Up", new_user_registration_path %>
+                <%= link_to "Sign In", new_user_session_path %>
+              <% end %>
+          </div>
+
 
         </div>
 
