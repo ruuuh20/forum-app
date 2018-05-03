@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+
+
   def create
   @post = Post.find(params[:post_id])
   @comment = @post.comments.create(params[:comment].permit(:comment))
@@ -8,7 +10,8 @@ class CommentsController < ApplicationController
   if @comment.save
     redirect_to post_path(@post)
   else
-    render 'new'
+    flash[:notice] = "You must be signed in"
+    redirect_to root_path
   end
 end
 

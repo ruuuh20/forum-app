@@ -14,14 +14,21 @@
  *= require_self
  */
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato|Poppins|Source+Sans+Pro');
 
 
 body {
   margin-left: 0;
   // padding: 20px;
   background: #EDEFF0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+  width: 60%;
+	max-width: 1140px;
+	margin: 0 auto;
 }
 
 .clearfix:before, .clearfix:after {
@@ -34,7 +41,8 @@ clear: both;
 }
 
 header {
-  width: 100%;
+  width: 80%;
+  padding-top: 10px;
 	margin: 0 auto;
   #logo {
   		float: left;
@@ -61,13 +69,6 @@ header {
 		}
 
 }
-}
-
-
-.container {
-  width: 60%;
-	max-width: 1140px;
-	margin: 0 auto;
 }
 
 
@@ -181,4 +182,12 @@ header {
 			margin: 1em 0;
 		}
 	}
+}
+
+.home-button {
+  float: right;
+}
+
+.flash-container {
+  background-color:	#8db9c4;
 }

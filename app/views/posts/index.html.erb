@@ -8,7 +8,7 @@
 
   <h2 class="title"><%= link_to post.title, post %></h2><br>
   <p class="date">
-    Published at: <br>
+    Published at:
       <%=  time_ago_in_words(post.created_at) %>
     by <%= post.user.email %>
   </p>
