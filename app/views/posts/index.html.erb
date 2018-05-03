@@ -1,7 +1,20 @@
+<div class="posts">
+
+
+
 <% @posts.each do |post| %>
-<%= link_to post.title, post %><br>
-Published at: <br>
-<%=  time_ago_in_words(post.created_at) %>
-by <%= post.user.email %>
+  <div class="post">
+
+
+  <h2 class="title"><%= link_to post.title, post %></h2><br>
+  <p class="date">
+    Published at: <br>
+      <%=  time_ago_in_words(post.created_at) %>
+    by <%= post.user.email %>
+  </p>
+  </div>
 <% end %>
 <%= link_to "New Post", new_post_path %>
+
+
+</div>

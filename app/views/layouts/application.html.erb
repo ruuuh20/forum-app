@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ForumApp</title>
+    <title>Forum App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,10 +10,25 @@
   </head>
 
   <body>
+    <header class="clearfix">
+        <div class="container">
+      <div class="logo" id="logo">
+        <p>Lead Korea </p>
+      </div>
+
+          <button type="button" name="button"><%= link_to "New Post", new_post_path %></button>
+
+        </div>
+
+    </header>
+
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
+  <div class="container">
+  <%= yield %>
+  </div>
 
-    <%= yield %>
   </body>
 </html>
