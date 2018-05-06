@@ -42,10 +42,11 @@ clear: both;
 
 header {
   width: 80%;
-  padding-top: 10px;
+  // padding-top: 10px;
 	margin: 0 auto;
   #logo {
   		float: left;
+      padding-top: 10px;
   		a {
   			text-transform: uppercase;
   			font-weight: 700;
@@ -53,6 +54,8 @@ header {
   			font-size: 1.2rem;
   			text-decoration: none;
   			color:#397CAC;
+        letter-spacing: .1rem;
+        // padding-top: 10px;
   		}
   }
 
@@ -79,7 +82,7 @@ header {
 
 .posts {
 	background: #ffffff;
-	padding: 2em 5%;
+	padding: 1.8em 5%;
 	border-radius: .5em;
 	.post {
 		margin: 1em 0;
