@@ -3,9 +3,6 @@
   <p><%= @post.content %></p>
 
 
-
-
-
 <div class="" id="comments">
   <h4><%= @post.comments.count %> Comments</h4>
   <%= render @post.comments %>
@@ -18,6 +15,14 @@
 <br>
 <hr>
 <br>
+
+<% if @post.attachments? %>
+  <ul>
+    <% @post.attachments.each do |attachment| %>
+      <li><%= image_tag attachment.url %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 
 
